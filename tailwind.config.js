@@ -8,10 +8,11 @@ module.exports = {
     extend: {
       fontFamily: {
         main: ["Montserrat"],
-        hero: ["azo-sans-web, helvetica, arial, sans-serif;"]
+        hero: ["azo-sans-web, helvetica, arial, sans-serif"],
+        Juli: ["ProximaNova, helvetica, arial, sans-serif"]
       },
       fontSize: {
-        'xxs': "0.1rem",
+        "2xs": "0.2rem",
         "4.5xl": "2.5rem"
       },
       colors: {

@@ -1,3 +1,130 @@
 @tailwind  base;
 @tailwind components;
+
+.wrapper {
+  @apply py-10 px-6;
+}
+
+.section-title {
+  @apply text-2xl font-bold;
+}
+
+.btn {
+  @apply px-6 py-3 text-primary mr-4 text-sm font-semibold font-main;
+}
+
+.btn--orange{
+  @apply bg-primary text-white border;
+}
+
+.btn--white{
+  @apply bg-white text-black border-black border;
+}
+
+
+.product-section {
+  .product-section-vertical{
+    &__tabs {
+      @apply w-full;
+    }
+
+    &__item {
+      @apply relative pl-0 pr-2 mx-2 border-primary;
+      &:after {
+        content: "";
+        width: 0.06rem;
+        height: 60%;
+        background-color: #535353;
+        position: absolute;
+        top: 0.2rem;
+        right: -0.5rem;
+      }
+    }
+    &__item-title {
+      @apply text-xs tracking-normal text-gray-700 font-semibold;
+    }
+    &--active-item {
+      @apply border-b-2 border-primary;
+    }
+    &--last-item {
+      &:after{
+        display: none;
+      }
+    }
+    &__imageWrapper {
+     @apply w-full mx-auto;
+     img {
+       @apply w-full;
+     } 
+    }
+    &__product-name {
+      @apply pb-1 text-lg font-bold;
+    }
+    &__product-tag {
+      @apply bg-primary text-white text-xs uppercase px-1 py-1;
+    }
+    &__buttons-wrapper {
+      @apply py-6;
+    }
+    &____product-description{
+      @apply font-main w-full;
+    }
+  }
+
+
+.product-section-horizontal {
+ 
+  &__item {
+    @apply relative px-1 py-2;
+  }
+  &--active-item {
+    @apply py-6;
+    .up-down-buttons {
+      @apply absolute flex flex-col h-8 -ml-8 pb-6;
+    }
+
+    .product-section-horizontal__product-description {
+      @apply mb-6;
+    }
+    .product-section-horizontal__item-title {
+      @apply pb-1 text-lg font-extrabold text-black;
+    }
+  }
+  &--inactive-item {
+.product-section-horizontal__item-title {
+  @apply font-semibold text-gray-400;
+}
+
+
+    .product-section-horizontal__buttons-wrapper {
+      @apply hidden;
+    }
+
+    .up-down-buttons {
+      @apply hidden;
+    }
+
+    .product-section-horizontal__product-description {
+      @apply hidden;
+    }
+  }
+  &__product-tag {
+    @apply bg-primary text-white text-xs uppercase px-1 py-1;
+  }
+ }
+}
+
+
+
+
+
+
+
+
+
 @tailwind utilities;
+     @screen lg {
+       .product-section-vertical {
+         @apply hidden;
+       }
+     }
