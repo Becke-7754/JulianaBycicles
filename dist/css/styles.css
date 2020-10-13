@@ -640,6 +640,12 @@ video {
   font-family: Montserrat;
 }
 
+.btn:hover {
+  --bg-opacity: 1;
+  background-color: #ecc94b;
+  background-color: rgba(236, 201, 75, var(--bg-opacity))
+}
+
 .btn--orange{
   --bg-opacity: 1;
   background-color: #d29e0e;
