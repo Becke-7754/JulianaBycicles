@@ -12,7 +12,7 @@
 .btn {
   @apply px-6 py-3 text-primary mr-4 text-sm font-semibold font-main;
   &:hover {
-    @apply bg-yellow-500
+    @apply bg-yellow-500;
   }
 }
 
@@ -22,6 +22,18 @@
 
 .btn--white{
   @apply bg-white text-black border-black border;
+}
+.card-title{
+  @apply font-bold text-sm my-2;
+
+}
+
+.card-category{
+@apply text-xs font-medium text-gray-600;
+}
+.read-more{
+  @apply text-2xs font-medium font-main text-primary;
+
 }
 
 
@@ -117,6 +129,39 @@
  }
 }
 
+.news-section{
+  @apply bg-gray-100 w-full;
+
+  &__featured-card {
+    @apply mb-6;
+  }
+  &__featured-card-imageWrapper{
+  @apply w-full;
+
+  img{
+    @apply w-full;
+  }
+}
+  &__featured-card-title {
+    @apply text-sm font-bold mt-1 mb-1;
+  }
+
+  &__news-cards{
+    @apply flex flex-col;
+  }
+  &__news-card {
+    @apply flex flex-row w-full mb-6;
+  }
+
+  &__news-card-imageWrapper {
+    @apply w-1/2;
+  }
+  &__news-card-text {
+    @apply w-1/2 ml-4;
+  }
+
+}
+
 
 
 
@@ -126,6 +171,33 @@
 
 
 @tailwind utilities;
+
+     @screen md {
+       .news-section {
+        &__card{
+          @apply flex flex-row w-full;
+        }
+
+        &__featured-card {
+          @apply w-8/12;
+        }
+
+        &__news-cards {
+          @apply w-4/12;
+        }
+        &__news-card {
+          @apply flex flex-col items-start w-full;
+        }
+
+        &__news-card-imageWrapper {
+          @apply w-full ml-6 pr-6;
+        }
+
+        &__news-card-text {
+          @apply w-full ml-6 mt-2;
+        }
+     }
+    }
      @screen lg {
        .product-section-vertical {
          @apply hidden;
